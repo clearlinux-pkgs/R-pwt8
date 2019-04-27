@@ -4,7 +4,7 @@
 #
 Name     : R-pwt8
 Version  : 8.1.1
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/pwt8_8.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pwt8_8.1-1.tar.gz
 Summary  : Penn World Table (Version 8.x)
