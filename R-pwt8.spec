@@ -4,14 +4,13 @@
 #
 Name     : R-pwt8
 Version  : 8.1.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/pwt8_8.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pwt8_8.1-1.tar.gz
 Summary  : Penn World Table (Version 8.x)
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 income, output, inputs, and productivity for 167 countries
@@ -19,21 +18,22 @@ income, output, inputs, and productivity for 167 countries
 
 %prep
 %setup -q -c -n pwt8
+cd %{_builddir}/pwt8
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571881201
+export SOURCE_DATE_EPOCH=1589537722
 
 %install
-export SOURCE_DATE_EPOCH=1571881201
+export SOURCE_DATE_EPOCH=1589537722
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
